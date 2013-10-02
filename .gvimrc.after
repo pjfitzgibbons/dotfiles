@@ -1,0 +1,11 @@
+color ir_dark
+
+nmap <buffer> <C-]> :let word=expand("<cword>")<CR><C-W>l:exe "tag" word<CR>
+
+if filereadable(expand("~/Documents/programming/janus/gvimrc"))
+  source ~/Documents/programming/janus/gvimrc
+endif
+
+" Auto save on window focus lost
+:au FocusLost * silent! wa
+
